@@ -10,7 +10,7 @@ export class IndexActor {
   constructor(page: Page, mainPage: MainPage, productSelectionPage: ProductSelectionOpensusePage) {
     this.page = page;
     this.mainPage = mainPage;
-    this.productSelectionPage = productSelectionPage; 
+    this.productSelectionPage = productSelectionOpensusePage; 
   }
 
   async goto() {
