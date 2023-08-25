@@ -1,5 +1,5 @@
-import { ProductSelectionPage } from '../pages/product-selection-opensuse-page';
-import { MainPage } from '../pages/main-page';
+//import { ProductSelectionPage } from '../pages/product-selection-opensuse-page';
+//import { MainPage } from '../pages/main-page';
 
 export class IndexActor {
   readonly page: Page;
