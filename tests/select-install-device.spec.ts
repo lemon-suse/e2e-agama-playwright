@@ -19,6 +19,11 @@ test.describe('The main page', () => {
 
     test('Installation on second available storage device', async ({ page }) => {
         const mainPage = new MainPage(page);
+
+        await test.step("set mandatory user and root password", async () => {
+            await mainPage.accessUsers();
+            await (new UserActor(page)).handleUser();
+        });
         await test.step("select second available device for installation", async () => {
             const storagePage = new StoragePage(page);
             // Poo#137537 Workaround the device selection timeout issue.
@@ -32,10 +37,10 @@ test.describe('The main page', () => {
             await storagePage.back();
         });
 
-        await test.step("set mandatory user and root password", async () => {
-            await mainPage.accessUsers();
-            await (new UserActor(page)).handleUser();
-        });
+        //await test.step("set mandatory user and root password", async () => {
+          //  await mainPage.accessUsers();
+          //  await (new UserActor(page)).handleUser();
+        //});
 
         //Installation
         await test.step("Run installation", async () => {
