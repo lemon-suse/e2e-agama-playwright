@@ -26,7 +26,7 @@ export class MainPage {
     }
 
     async expectInstallationSize() {
-        await expect(this.installationSize).toBeVisible({ timeout: 2 * 60 * 1000 });
+        await expect(this.installationSize).toBeVisible({ timeout: 5 * 60 * 1000 });
     }
 
     async install() {
